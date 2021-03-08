@@ -1,22 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import {Link} from 'react-router-dom';
+import { CategoryContext } from '../../App';
+import Category from '../Category/Category';
 
 const Home = () => {
-    const [countries, setCountries] = useState([]);
-    useEffect(() => {
-        const url = 'https://restcountries.eu/rest/v2/all';
-        fetch(url)
-        .then(res => res.json())
-        .then(data => setCountries(data));
-    }, []);
-
-    console.log(countries);
-
+    const category = useContext(CategoryContext);
     return (
-        <div>
-            {
-                countries.map(country => <Link to={`/country/${country.name}`}><li>{country.name}</li></Link>)
-            }
+        <div style={{border: '2px solid green', margin: '5px', padding: '5px'}}>
+            <h2>Inside Home Category: {category}</h2>
+            <Category></Category>
         </div>
     );
 };
