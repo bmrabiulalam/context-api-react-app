@@ -1,6 +1,5 @@
 import './App.css';
 import React, { createContext, useState } from 'react';
-import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Shipment from './components/Shipment/Shipment';
