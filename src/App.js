@@ -3,7 +3,6 @@ import React, { createContext, useState } from 'react';
 import Home from './components/Home/Home';
 import Header from './components/Header/Header';
 import Shipment from './components/Shipment/Shipment';
-import NotFound from './components/NotFound/NotFound';
 
 export const CategoryContext = createContext();
 
