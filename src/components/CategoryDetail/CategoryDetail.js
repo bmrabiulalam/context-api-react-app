@@ -1,5 +1,4 @@
-import React, { useContext } from 'react';
-import { CategoryContext } from '../../App';
+import React from 'react';
 
 const CategoryDetail = (props) => {
     return (
